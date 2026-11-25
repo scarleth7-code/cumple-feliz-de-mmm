@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff0f5">
+    <title>Una sorpresa para ti</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- APERTURA -->
+    <section id="openingScreen" class="screen active">
+        <div class="opening-card">
+            <div class="opening-decoration">✦ ✧ ✦</div>
+            <p class="small-heading">Una pequeña sorpresa</p>
+            <h1>Algo bonito<br>te espera...</h1>
+
+            <div class="opening-hamster">
+                <div class="hamster hamster-cream hamster-small">
+                    <span class="hamster-ear ear-left"></span>
+                    <span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span>
+                    <span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span>
+                    <span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span>
+                    <span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span>
+                    <span class="hamster-foot foot-right"></span>
+                    <span class="hamster-flower">✿</span>
+                </div>
+            </div>
+
+            <button class="main-button" id="openButton">Abrir sorpresa</button>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introScreen" class="screen">
+        <div class="intro-card">
+            <p class="small-heading">Un día especial</p>
+            <h1>Sopla las velitas</h1>
+
+            <div class="animal-scene">
+                <div class="hamster hamster-cream">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-flower">✿</span>
+                </div>
+
+                <div class="hamster hamster-caramel">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-bow">⌁</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Hay algo esperando por ti.
+                ¿Estás listo para comenzar?
+            </p>
+
+            <button class="main-button" id="startButton">Comenzar</button>
+        </div>
+    </section>
+
+    <!-- 17 VELITAS -->
+    <section id="candleScreen" class="screen">
+        <div class="candle-card">
+            <p class="small-heading">Un deseo a la vez</p>
+            <h1>Una velita a la vez...</h1>
+            <p class="description">Toca la velita para apagarla.</p>
+
+            <div class="progress-area">
+                <span id="candleCounter">0 de 17 velitas</span>
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <div id="candleStage" class="candle-stage">
+                <div id="singleCandle" class="single-candle" role="button" tabindex="0" aria-label="Apagar velita">
+                    <div class="flame"></div>
+                    <div class="wick"></div>
+                    <div class="candle-body"></div>
+                </div>
+            </div>
+
+            <p id="candleMessage" class="candle-message">¡Toca la velita!</p>
+        </div>
+    </section>
+
+    <!-- TORTA -->
+    <section id="finalScreen" class="screen">
+        <div class="birthday-card">
+            <p class="small-heading">Un día para celebrar</p>
+            <h1>¡Feliz cumpleaños!</h1>
+
+            <div class="cake-area">
+                <div class="cake">
+                    <div class="cake-candles" id="cakeCandles"></div>
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-bottom"></div>
+                    <div class="cake-plate"></div>
+                </div>
+            </div>
+
+            <div class="birthday-number">17</div>
+
+            <div class="animal-scene birthday-animals">
+                <div class="hamster hamster-cream">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-flower">✿</span>
+                </div>
+
+                <div class="hamster hamster-caramel">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-bow">⌁</span>
+                </div>
+            </div>
+
+            <p class="birthday-message">
+                Que este nuevo año esté lleno de momentos
+                bonitos, alegrías y nuevas experiencias.
+            </p>
+
+            <button class="main-button" id="continueButton">Continuar</button>
+        </div>
+    </section>
+
+    <!-- DESEO -->
+    <section id="nextScreen" class="screen">
+        <div class="wish-card">
+            <div class="wish-decoration">✦ ✧ ✦</div>
+            <p class="small-heading">Un momento especial</p>
+            <h1>Antes de continuar...</h1>
+            <div class="wish-moon">☾</div>
+            <h2>Pide un deseo</h2>
+
+            <p class="wish-text">
+                Cierra tus ojitos por un momento e imagina
+                todo lo bonito que te gustaría vivir en este
+                nuevo año de tu vida.
+            </p>
+
+            <p class="wish-instruction">¿Qué deseo te gustaría pedir?</p>
+
+            <p class="wish-notice">
+                Este deseo es especial. Cuando lo envíes,
+                llegará al amor de tu vida para que pueda leerlo después.
+            </p>
+
+            <form id="wishForm">
+                <textarea
+                    id="wishMessage"
+                    name="deseo"
+                    placeholder="Escribe aquí tu deseo..."
+                    required
+                    maxlength="500"
+                ></textarea>
+
+                <button type="submit" id="wishButton" class="main-button">
+                    Enviar mi deseo
+                </button>
+            </form>
+
+            <p id="wishFeedback" class="wish-feedback" aria-live="polite"></p>
+
+            <button type="button" id="afterWishButton" class="main-button" hidden>
+                Continuar
+            </button>
+        </div>
+    </section>
+
+    <!-- TRANSICIÓN -->
+    <section id="transitionScreen" class="screen">
+        <div class="transition-card">
+            <p class="small-heading">Un deseo enviado...</p>
+            <h1>Tu deseo ya está en camino</h1>
+
+            <p class="description">
+                Hay momentos especiales que merecen
+                guardarse con mucho cariño.
+            </p>
+
+            <div class="animal-scene">
+                <div class="hamster hamster-cream">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-flower">✿</span>
+                </div>
+
+                <div class="hamster hamster-caramel">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-bow">⌁</span>
+                </div>
+            </div>
+
+            <div class="floating-stars">✦　✧　✦</div>
+            <p class="description">Y esto todavía no termina...</p>
+            <button class="main-button" id="letterButton">Leer tu carta</button>
+        </div>
+    </section>
+
+    <!-- CARTA DE CUMPLEAÑOS -->
+    <section id="letterScreen" class="screen">
+        <div class="letter-card">
+            <div class="letter-top-decoration">✦ ───── ✧ ───── ✦</div>
+
+            <div class="letter-paper">
+                <p class="letter-note">💓</p>
+
+                <h1 class="birthday-letter-title">Feliz cumpleaños</h1>
+
+                <h2 class="letter-greeting">Amor de mi vida</h2>
+
+                
+<div class="letter-content">
+    <p>
+        Mi niño queridoooo y mimadooooo, muchos felicesss
+        cumpleañossssssshhh, este díita es muy especial ya que es tu
+        díaa, espero que la pases supeeeerrr bien, que cada momento
+        sea especial, lleno de amor y felicidad.
+    </p>
+
+    <p>
+        Espero que se hayan cumplido tus propósitos del anterior año,
+        que desde hoy te propongas nuevas metas y llegues a cumplirlas,
+        porque sé que puedes afrontar los obstáculos de la vida, con
+        fe y voluntad todo se logra, espero que logres todo lo que desees.
+    </p>
+
+    <p>
+        Que en este maravilloso día Papito Dios te dé un día lleno
+        de buenos recuerdos.
+    </p>
+
+    <p>
+        Nunca te rindas ante cualquier adversidad, las pruebas son
+        parte del vivir, aprende de cada bajón y sigue adelante,
+        mejora como persona y no permitas que algo mínimo te haga
+        sentir fatal, de las caídas se avanza y sé que puedes con
+        cualquier mal de la vida, confía en tu fuerza voluntad y en ti.
+    </p>
+
+    <p>
+        Te amo de aquí al infinito a pasitos de tortuwita mi niño,
+        tu presencia en mi camino es algo muy valioso que le agradezco
+        con todo mi corazón a Dios, le agradezco por permitirnos
+        compartir parte de nuestra existencia, por enseñarme a través
+        de ti lo que es el amor inocente y sin malicia, por todo ese
+        maravilloso tiempo que estuvimos juntos y para mí siempre
+        estarán presentes, quedan en mi corazóncito.
+    </p>
+    
+    <p>
+        Nunca alguien
+        podrá ocupar el lugar que tienes en mi alma, ni mi lugar en
+        tu alma.
+    </p>
+
+    <p>
+        Mi niño, nunca dudes en recurrir a mí si te sientes mal,
+        si tienes algún problema, si necesitas hablar o por cualquier
+        cosa, sea cual sea la situación, te prometo con toda mi alma
+        que siempre estaré para ti sin importar cuánto haya pasado,
+        ya que siempre serás el amor de mi vida y el hombre más
+        importante en este mundo para mí. 💓
+    </p>
+
+</div>
+
+<div class="letter-signature">Te amo <br> Hoy, mañana y siempre.</br></div>
+
+            </div>
+
+            <div class="letter-bottom-decoration">✧ ───── ✦ ───── ✧</div>
+
+            <button class="main-button" id="letterToSongButton">
+                Escuchar la canción
+            </button>
+        </div>
+    </section>
+
+    <!-- CANCIÓN -->
+    <section id="songScreen" class="screen">
+        <div class="song-card">
+            <p class="small-heading">Una canción para ti</p>
+            <div class="music-decoration">♫</div>
+
+            <h1 class="song-title">Neo Roneo</h1>
+            <p class="song-subtitle">Quererte hasta que duela</p>
+
+            <div class="song-hamsters">
+                <div class="hamster hamster-cream">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-flower">✿</span>
+                </div>
+
+                <div class="hamster hamster-caramel">
+                    <span class="hamster-ear ear-left"></span><span class="hamster-ear ear-right"></span>
+                    <span class="hamster-body"></span><span class="hamster-belly"></span>
+                    <span class="hamster-eye eye-left"></span><span class="hamster-eye eye-right"></span>
+                    <span class="hamster-cheek cheek-left"></span><span class="hamster-cheek cheek-right"></span>
+                    <span class="hamster-nose"></span>
+                    <span class="hamster-foot foot-left"></span><span class="hamster-foot foot-right"></span>
+                    <span class="hamster-bow">⌁</span>
+                </div>
+            </div>
+
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube.com/embed/-FEXcwE8BuE"
+                    title="Neo Roneo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="song-note">
+                Escúchala con calma. Hay algo que quiero contarte después...
+            </p>
+
+            <button class="main-button" id="songButton">Continuar</button>
+        </div>
+    </section>
+
+    <!-- POR QUÉ NEO RONEO -->
+    <section id="whySongScreen" class="screen">
+        <div class="why-card">
+            <p class="small-heading">Hay canciones que dicen mucho</p>
+            <h1 class="why-title">¿Por qué Neo Roneo?</h1>
+
+            <div class="heart-scene">
+                <div class="big-heart">💓</div>
+                <div class="hugging-face">🥰</div>
+                <span class="heart-sparkle sparkle-one">✦</span>
+                <span class="heart-sparkle sparkle-two">✧</span>
+                <span class="heart-sparkle sparkle-three">✦</span>
+            </div>
+
+            <div class="reasons">
+                <p>Porque contigo mi ser es de amor y, sin ti, no sabe qué hacer.</p>
+
+                <p>Porque todo este corazón latente nunca me ha fallado; siempre ha sido para quererte hasta que duela.</p>
+
+                <p>Porque sin tu amor, poco a poco desaparezco...</p>
+
+                <p>Porque para mí, ahora eres un desconocido y ya no sé dónde estamos.</p>
+
+                <p>Porque del amor puro e inocente que surgió, no sé si me recuperaré.</p>
+
+                <p>Porque me quedo con todo lo que pasó.</p>
+
+                <p>Porque cuando duermo te miro y, cuando despierto, desapareces.</p>
+
+                <p>Porque, al parecer, nuestro destino, caminos diferentes.</p>
+            </div>
+
+            <p class="final-song-line">
+                Porque cada «Na-na-na» es un latido de mi amor por ti. 💓
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
